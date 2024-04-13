@@ -10,7 +10,5 @@ package com.mycompany.pilojainstrumentos;
  */
 public class PILojaInstrumentos {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    PILojaInstrumentos lojaInstrumentos = new PILojaInstrumentos();
 }
