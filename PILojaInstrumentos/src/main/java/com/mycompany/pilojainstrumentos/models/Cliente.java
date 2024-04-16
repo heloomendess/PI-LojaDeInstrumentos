@@ -10,14 +10,20 @@ public class Cliente {
     private int idCliente;
     private String nomeCliente;
     private String emailCliente;
-    private int CPF;
+    private String CPF;
     
     //Construtores
-    public Cliente(String nome, String email, String cpf) {
+    public Cliente(){
         
     }
     
-    public Cliente(int idCliente, String nomeCliente, String emailCliente, int CPF) {
+    public Cliente(String nomeCliente, String emailCliente, String CPF) {
+        this.nomeCliente = nomeCliente;
+        this.emailCliente = emailCliente;
+        this.CPF = CPF;
+    }
+    
+    public Cliente(int idCliente, String nomeCliente, String emailCliente, String CPF) {
         this.idCliente = idCliente;
         this.nomeCliente = nomeCliente;
         this.emailCliente = emailCliente;
@@ -46,10 +52,10 @@ public class Cliente {
         this.emailCliente = emailCliente;
     }
     
-    public int getCpf() {
+    public String getCpf() {
         return CPF;
     }
-    public void setCpf(int CPF) {
+    public void setCpf(String CPF) {
         this.CPF = CPF;
     }
     

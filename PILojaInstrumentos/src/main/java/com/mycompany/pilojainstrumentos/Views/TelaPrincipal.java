@@ -57,12 +57,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
+        jdcDataInicio = new com.toedter.calendar.JDateChooser();
+        jdcDataTermino = new com.toedter.calendar.JDateChooser();
         jMenuBar1 = new javax.swing.JMenuBar();
         jbarArquivo = new javax.swing.JMenu();
         jMenuProduto = new javax.swing.JMenu();
         jMenuProdInserir = new javax.swing.JMenuItem();
+        jMenuProdConsultar = new javax.swing.JMenuItem();
+        jMenuProdEditar = new javax.swing.JMenuItem();
+        jMenuProdExcluir = new javax.swing.JMenuItem();
         jMenuCliente = new javax.swing.JMenu();
         jMenuCliInserir = new javax.swing.JMenuItem();
+        jMenuCliConsultar = new javax.swing.JMenuItem();
+        jMenuCliEditar = new javax.swing.JMenuItem();
+        jMenuCliExcluir = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jbarAjuda = new javax.swing.JMenu();
 
@@ -193,23 +201,26 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Data", "Cliente", "Valor Total"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane3.setViewportView(jTable3);
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Código Produto", "Quantidade", "Valor Unitário"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane4.setViewportView(jTable4);
@@ -238,9 +249,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 .addGap(556, 556, 556))))
                     .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(107, 107, 107)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jdcDataInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addGap(57, 57, 57)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jdcDataTermino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
                         .addComponent(jButton1)
                         .addContainerGap())))
             .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
@@ -254,10 +269,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton1))
+                .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)
+                        .addComponent(jButton1))
+                    .addComponent(jdcDataInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jdcDataTermino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -281,8 +299,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuProduto.setText("Produto");
 
         jMenuProdInserir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        jMenuProdInserir.setText("Tela Produto");
+        jMenuProdInserir.setText("Inserir");
         jMenuProduto.add(jMenuProdInserir);
+
+        jMenuProdConsultar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuProdConsultar.setText("Consultar");
+        jMenuProduto.add(jMenuProdConsultar);
+
+        jMenuProdEditar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuProdEditar.setText("Editar");
+        jMenuProduto.add(jMenuProdEditar);
+
+        jMenuProdExcluir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuProdExcluir.setText("Excluir");
+        jMenuProduto.add(jMenuProdExcluir);
 
         jbarArquivo.add(jMenuProduto);
 
@@ -290,8 +320,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCliente.setText("Cliente");
 
         jMenuCliInserir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        jMenuCliInserir.setText("Tela Cliente");
+        jMenuCliInserir.setText("Inserir");
         jMenuCliente.add(jMenuCliInserir);
+
+        jMenuCliConsultar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuCliConsultar.setText("Consultar");
+        jMenuCliente.add(jMenuCliConsultar);
+
+        jMenuCliEditar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuCliEditar.setText("Editar");
+        jMenuCliente.add(jMenuCliEditar);
+
+        jMenuCliExcluir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuCliExcluir.setText("Excluir");
+        jMenuCliente.add(jMenuCliExcluir);
 
         jbarArquivo.add(jMenuCliente);
 
@@ -383,8 +425,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuCliConsultar;
+    private javax.swing.JMenuItem jMenuCliEditar;
+    private javax.swing.JMenuItem jMenuCliExcluir;
     private javax.swing.JMenuItem jMenuCliInserir;
     private javax.swing.JMenu jMenuCliente;
+    private javax.swing.JMenuItem jMenuProdConsultar;
+    private javax.swing.JMenuItem jMenuProdEditar;
+    private javax.swing.JMenuItem jMenuProdExcluir;
     private javax.swing.JMenuItem jMenuProdInserir;
     private javax.swing.JMenu jMenuProduto;
     private javax.swing.JPanel jPanelRelatorios;
@@ -398,6 +446,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTable jTable4;
     private javax.swing.JMenu jbarAjuda;
     private javax.swing.JMenu jbarArquivo;
+    private com.toedter.calendar.JDateChooser jdcDataInicio;
+    private com.toedter.calendar.JDateChooser jdcDataTermino;
     private javax.swing.JLabel lblValorTotal;
     private javax.swing.JLabel lblValorTotalRelat;
     private javax.swing.JFormattedTextField txtCPF;
