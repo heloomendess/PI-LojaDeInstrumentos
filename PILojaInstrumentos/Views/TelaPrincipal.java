@@ -1,5 +1,9 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package com.mycompany.pilojainstrumentos.Views;
+import javax.swing.*;
 
 /**
  *
@@ -7,7 +11,9 @@ package com.mycompany.pilojainstrumentos.Views;
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 
-
+    /**
+     * Creates new form TelaPrincipal
+     */
     public TelaPrincipal() {
         initComponents();
         
@@ -51,6 +57,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
+        jdcDataInicio = new com.toedter.calendar.JDateChooser();
+        jdcDataTermino = new com.toedter.calendar.JDateChooser();
         jMenuBar1 = new javax.swing.JMenuBar();
         jbarArquivo = new javax.swing.JMenu();
         jMenuProduto = new javax.swing.JMenu();
@@ -241,9 +249,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 .addGap(556, 556, 556))))
                     .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(107, 107, 107)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jdcDataInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addGap(57, 57, 57)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jdcDataTermino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
                         .addComponent(jButton1)
                         .addContainerGap())))
             .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
@@ -257,10 +269,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRelatoriosLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton1))
+                .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)
+                        .addComponent(jButton1))
+                    .addComponent(jdcDataInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jdcDataTermino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -381,14 +396,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         //</editor-fold>
         
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
                  
                 
                 
             }
-        });
+        });*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -431,6 +446,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTable jTable4;
     private javax.swing.JMenu jbarAjuda;
     private javax.swing.JMenu jbarArquivo;
+    private com.toedter.calendar.JDateChooser jdcDataInicio;
+    private com.toedter.calendar.JDateChooser jdcDataTermino;
     private javax.swing.JLabel lblValorTotal;
     private javax.swing.JLabel lblValorTotalRelat;
     private javax.swing.JFormattedTextField txtCPF;
